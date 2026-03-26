@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sistema Centralizado de Alocação de Ativos e Relatorização</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles/reset.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css"/>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css"/>
+  <link rel="stylesheet" href="styles/index.css">
+</head>
+<body class="bg-zinc-50 w-full h-screen">
+  <div class="flex p-10 h-full">
+    <nav id="nav-menu" class="w-64 h-full flex justify-between flex-col rounded-lg gap-2">
+      <div>
+        <img src="images/caars_logo_green_on_white.svg" class="w-[130px]">
+        <h1 class="text-[0.8rem] mt-4 text-zinc-700 font-medium">Sistema Centralizado de Alocação de Ativos e Relatorização</h1>
+      </div>
+
+      <ul class="flex flex-col gap-3 text-zinc-600">
+        <li class="text-green-800"><a href="#"><i class="ph-fill ph-house"></i> Dashboard</a></li>
+        <li class="hover:text-green-700 transition-all"><a href="#"><i class="ph ph-car"></i> Veículos</a></li>
+        <li class="hover:text-green-700 transition-all"><a href="#"><i class="ph ph-fire-truck"></i> Em Transporte</a></li>
+        <li class="hover:text-green-700 transition-all"><a href="#"><i class="ph ph-map-pin-simple-area"></i> Localizações</a></li>
+        <li class="hover:text-green-700 transition-all"><a href="#"><i class="ph ph-screwdriver"></i> Manutenção</a></li>
+        <li class="hover:text-green-700 transition-all"><a href="#"><i class="ph ph-note"></i> Relatórios</a></li>
+        <li class="hover:text-green-700 transition-all"><a href="#"><i class="ph ph-users-four"></i> Funcionários</a></li>
+        <li class="hover:text-green-700 transition-all"><a href="#"><i class="ph ph-gear"></i> Configurações</a></li>
+      </ul>
+      <div></div>
+    </nav>
+
+    <div class="border-[0.001rem] mx-8 border-solid border-zinc-200 h-full"></div>
+
+    <section class="w-full h-full flex flex-col">
+      <header class="w-full flex justify-between mb-8">
+
+        <div class="rounded-lg group has-[:focus]:border-zinc-500 transition-all text-[0.9rem] gap-4 flex justify-center items-center border border-solid border-zinc-300 w-max px-4 py-2">
+          <i class="ph text-[1.3rem] group-has-[:focus]:text-zinc-800 text-zinc-500 ph-magnifying-glass"></i>
+          <input type="text" placeholder="Pesquise por placas, motoristas..." class="bg-transparent w-[20rem] outline-none">
+        </div>
+
+        <div class="rounded-lg text-[0.9rem] gap-2 flex justify-center items-center border border-solid border-zinc-300 w-max px-4 py-2">
+          <div>
+            <div class="mb-[-0.3rem]">
+              <span class="font-medium text-zinc-600">455955</span>
+              <span class="font-semibold text-green-800">Emanuel Carvalho</span>
+            </div>
+            <span class="text-[0.8rem] font-medium text-zinc-600">IT Developer Operations</span>
+          </div>
+          <i class="ph text-[1rem] ph-caret-right"></i>
+        </div>
+      </header>
+
+      <main class="flex flex-col flex-1 gap-6">
+        <div>
+          <h1 class="text-2xl font-semibold text-zinc-900">Minha Frota</h1>
+          <p class="text-zinc-600">Situação, disponibilidade e localização da sua frota</p>
+        </div>
+
+        <div id="container-widgets" class="flex gap-4">
+          <article class="p-4 flex gap-6 flex-col rounded-lg border border-solid border-zinc-300 w-52">
+            <i class="ph ph-car text-green-50 bg-green-800"></i>
+            <div>
+              <h2 class="text-zinc-800 text-[0.9rem]">Total de Veículos</h2>
+              <p class="text-xl text-zinc-900 font-bold mt-[-0.001rem]">234</p>
+            </div>
+          </article>
+
+          <article class="p-4 flex gap-6 flex-col rounded-lg border border-solid border-zinc-300 w-52">
+            <i class="ph ph-seal-check text-green-50 bg-green-700"></i>
+            <div>
+              <h2 class="text-zinc-800 text-[0.9rem]">Disponíveis</h2>
+              <span class="flex justify-between items-center">
+                <p class="text-xl text-zinc-900 font-bold mt-[-0.001rem]">102</p>
+                <p class="text-[0.7rem] text-zinc-600 font-medium">43,59% Ativo</p>
+              </span>
+            </div>
+          </article>
+
+          <article class="p-4 flex gap-6 flex-col rounded-lg border border-solid border-zinc-300 w-52">
+            <i class="ph ph-fire-truck text-zinc-50 bg-zinc-700"></i>
+            <div>
+              <h2 class="text-zinc-800 text-[0.9rem]">Em Transporte</h2>
+              <span class="flex justify-between items-center">
+                <p class="text-xl text-zinc-900 font-bold mt-[-0.001rem]">12</p>
+              </span>
+            </div>
+          </article>
+
+          <article class="p-4 flex gap-6 flex-col rounded-lg border border-solid border-zinc-300 w-52">
+            <i class="ph ph-fire-truck text-zinc-50 bg-red-700"></i>
+            <div>
+              <h2 class="text-zinc-800 text-[0.9rem]">Em Manutenção</h2>
+              <span class="flex justify-between items-center">
+                <p class="text-xl text-zinc-900 font-bold mt-[-0.001rem]">7</p>
+              </span>
+            </div>
+          </article>
+        </div>
+
+        <hr>
+
+        <div class="">
+          <div class="flex items-center justify-between pb-6">
+            <div>
+              <h2 class="text-2xl font-semibold text-gray-800">Atualizações Recentes</h2>
+              <p class="text-zinc-600">Acompanhe as principais informações de sua frota.</p>
+            </div>
+            <a href="#" class="text-green-800 hover:font-semibold transition-all">Ver todos os veículos &rarr;</a>
+          </div>
+
+          <table class="w-full text-left table-auto border border-solid p-3 border-gray-200 rounded-lg border-separate" style="border-spacing: 0;">
+            <thead>
+              <tr class="text-sm font-medium text-gray-600">
+                <th class="py-3 px-4">PLACA</th>
+                <th class="py-3 px-4">STATUS</th>
+                <th class="py-3 px-4">ALOCAÇÃO</th>
+                <th class="py-3 px-4">ÚLTIMA LOCALIZAÇÃO</th>
+                <th class="py-3 px-4">ÚLTIMA ATUALIZAÇÃO</th>
+                <th class=""></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="border-t border-solid border-gray-200">
+                <td class="py-4 px-4 border-t border-solid border-gray-200">
+                  <div class="flex items-center gap-3">
+                    <div class="w-8 h-8 rounded-full bg-gray-200 text-center flex items-center justify-center font-bold text-gray-700">A</div>
+                    FJB4E12
+                  </div>
+                </td>
+                <td class="py-4 px-4 border-t border-solid border-gray-200">
+                  <span class="inline-flex items-center gap-x-1.5 rounded-full bg-green-100 px-2.5 py-1 text-xs font-semibold text-green-700">
+                    <i class="ph ph-check"></i>
+                    DISPONÍVEL
+                  </span>
+                </td>
+                <td class="py-4 px-4 border-t border-solid border-gray-200">Fernando Bastos</td>
+                <td class="py-4 px-4 border-t border-solid border-gray-200">
+                  <div class="flex items-center gap-2">
+                    <a href="https://maps.app.goo.gl/h7ov1PtvRs4pUikp6" rel="noopener noreferrer" target="_blank" class="transition-all flex group gap-2 items-center">
+                      <i class="ph ph-map-pin group-has-[:hover]:text-green-800"></i>
+                      <p class="group-has-[:hover]:text-green-800">Av. Bias Fortes 1655</p>
+                      <p class="text-[0.8rem] text-zinc-500 group-has-[:hover]:text-green-950 font-medium">Barro Preto</p>
+                    </a> 
+                  </div>
+                </td>
+                <td class="py-4 px-4 border-t border-solid border-gray-200">há 2 min</td>
+                <td class="py-4 px-4 border-t border-solid border-gray-200">
+                  <button class="p-1 px-3 rounded-full hover:text-green-800 transition-all"><i class="ph text-[1.3rem] ph-caret-right"></i></button>
+                </td>
+              </tr>
+              <tr class="border-t border-solid border-gray-200">
+                <td class="py-4 px-4 border-t border-solid border-gray-200">
+                  <div class="flex items-center gap-3">
+                    <div class="w-8 h-8 rounded-full bg-gray-200 text-center flex items-center justify-center font-bold text-gray-700">B</div>
+                    KKD2W15
+                  </div>
+                </td>
+                <td class="py-4 px-4 border-t border-solid border-solid border-gray-200">
+                  <span class="inline-flex items-center gap-x-1.5 rounded-full bg-zinc-700 px-2.5 py-1 text-xs font-semibold text-zinc-100">
+                    <i class="ph ph-hourglass-medium"></i>
+                    EM TRANSPORTE
+                  </span>
+                </td>
+                <td class="py-4 px-4 border-t border-solid border-solid border-gray-200">Marta Ramos</td>
+                <td class="py-4 px-4 border-t border-solid border-solid border-gray-200">
+                  <div class="flex items-center gap-2">
+                    <a href="https://maps.app.goo.gl/Ra2uhXPvT2D19sxq9" rel="noopener noreferrer" target="_blank" class="transition-all group flex gap-2 items-center">
+                      <i class="ph ph-map-pin group-has-[:hover]:text-green-800"></i>
+                      <p class="group-has-[:hover]:text-green-800">R. Gurupá 33</p>
+                      <p class="text-[0.8rem] text-zinc-500 group-has-[:hover]:text-green-950 font-medium">Cachoeirinha</p>
+                    </a> 
+                  </div>
+                </td>
+                <td class="py-4 px-4 border-t border-solid border-solid border-gray-200">há 14 min</td>
+                <td class="py-4 px-4 border-t border-solid border-gray-200">
+                  <button class="p-1 px-3 rounded-full hover:text-green-800 transition-all"><i class="ph text-[1.3rem] ph-caret-right"></i></button>
+                </td>
+              </tr>
+              <tr class="border-t border-solid border-solid border-gray-200">
+                <td class="py-4 px-4 border-t border-solid border-solid border-gray-200">
+                  <div class="flex items-center gap-3">
+                    <div class="w-8 h-8 rounded-full bg-gray-200 text-center flex items-center justify-center font-bold text-gray-700">C</div>
+                    BNM4L69
+                  </div>
+                </td>
+                <td class="py-4 px-4 border-t border-solid border-solid border-gray-200">
+                  <span class="inline-flex items-center gap-x-1.5 rounded-full bg-red-100 px-2.5 py-1 text-xs font-semibold text-red-700">
+                    <i class="ph ph-x"></i>
+                    EM MANUTENÇÃO
+                  </span>
+                </td>
+                <td class="py-4 px-4 border-t border-solid border-solid border-gray-200">-</td>
+                <td class="py-4 px-4 border-t border-solid border-solid border-gray-200">
+                  <div class="flex items-center gap-2">
+                    <a href="https://maps.app.goo.gl/p28rafaKaSDxkvzx7" rel="noopener noreferrer" target="_blank" class="transition-all group flex gap-2 items-center">
+                      <i class="ph ph-map-pin group-has-[:hover]:text-green-800"></i>
+                      <p class="group-has-[:hover]:text-green-800">Av. Prof. Magalhães P. 269</p>
+                      <p class="text-[0.8rem] text-zinc-500 group-has-[:hover]:text-green-950 font-medium">Pampulha</p>
+                    </a> 
+                  </div>
+                </td>
+                <td class="py-4 px-4 border-t border-solid border-solid border-gray-200">há 32min</td>
+                <td class="py-4 px-4 border-t border-solid border-gray-200">
+                  <button class="p-1 px-3 rounded-full hover:text-green-800 transition-all"><i class="ph text-[1.3rem] ph-caret-right"></i></button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </main>
+
+      <footer class="text-left mt-12 justify-between flex w-full">
+        <div class="text-zinc-500 text-[0.9rem] flex flex-col"><span>Todos direitos reservados.</span><a rel="noopener noreferrer" target="_blank" href="https://www.localiza.com/brasil/pt-br" class="font-semibold text-green-600">© Localiza&Co</a></div>
+        <div class="flex items-center gap-4">
+          <img src="images/localiza_frotas_logo_black.svg" class="w-28 opacity-90">
+          <p class="text-zinc-400">|</p>
+          <img src="images/localiza_labs_logo_black.svg" class="w-20 opacity-90">
+        </div>
+      </footer>
+    </section>
+  </div>
+  
+</body>
+</html>
